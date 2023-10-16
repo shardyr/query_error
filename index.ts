@@ -5,11 +5,9 @@
 
 // upstash
 import { Redis } from "@upstash/redis";
-import * as Q from "@upstash/query";
+import { Query } from "@upstash/query";
 
 async function main() {
-  const Query = Q.Query;
-
   const q = new Query({
     redis: Redis.fromEnv({ automaticDeserialization: false }),
   });
